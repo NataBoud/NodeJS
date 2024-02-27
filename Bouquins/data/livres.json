@@ -1,0 +1,33 @@
+{
+    "livres_developpement": [
+      {
+        "id": 1,
+        "titre": "Clean Code: A Handbook of Agile Software Craftsmanship",
+        "auteur": "Robert C. Martin",
+        "année_publication": 2008,
+        "description": "Un livre qui offre des directives pratiques pour écrire du code propre, maintenable et efficace."
+      },
+      {
+        "id": 2,
+        "titre": "Design Patterns: Elements of Reusable Object-Oriented Software",
+        "auteur": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+        "année_publication": 1994,
+        "description": "Un ouvrage classique décrivant les principaux motifs de conception logicielle pour améliorer la réutilisabilité et la flexibilité du code."
+      },
+      {
+        "id": 3,
+        "titre": "Refactoring: Improving the Design of Existing Code",
+        "auteur": "Martin Fowler",
+        "année_publication": 1999,
+        "description": "Un guide pratique sur les techniques de refactoring pour améliorer la conception du code sans altérer son comportement externe."
+      },
+      {
+        "id": 4,
+        "titre": "The Pragmatic Programmer: Your Journey to Mastery",
+        "auteur": "Andrew Hunt, David Thomas",
+        "année_publication": 1999,
+        "description": "Un livre offrant des conseils pratiques et des astuces pour améliorer les compétences en développement logiciel et devenir un programmeur plus efficace."
+      }
+    ]
+  }
+  
