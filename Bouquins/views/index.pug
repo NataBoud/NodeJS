@@ -1,0 +1,13 @@
+doctype html
+html(lang="fr")
+  head
+    title MyPage
+    style
+      include style.css
+  body
+  main
+    h1 #{title}
+    p #{message}
+    a(href='/livres') Livres
+    a(class='button' href='/livres/:id') Détails des livres
+    a(class='button', href='/ajout-livre') Ajouter un livre
