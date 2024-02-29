@@ -10,20 +10,13 @@ const bookController = {
 
   addBook: (req, res) => {
     bookData = req.body;
-    Book.addBook(
-      [
-        bookData.titre,
-        bookData.auteur,
-        bookData.annee_publication,
-        bookData.disponible,
-      ],
-      (err) => {
+    Book.addBook(bookData, (err) => {
         if (err) {
           console.error(err);
           res.status(500).send("Erreur lors de l'ajout du livre.");
         } else {
           console.log("Le livre a ajouté avec succès");
-          res.send("Le livre a ajouté avec succès");
+          res.json("Le livre a ajouté avec succès");
         }
       }
     );
@@ -32,11 +25,7 @@ const bookController = {
   updateBook: (req, res) => {
     const bookId = req.params.id;
     const bookData = req.body;
-    const { titre, auteur, annee_publication, disponible } = bookData;
-    Book.updateBook(
-      bookId,
-      { titre, auteur, annee_publication, disponible },
-      (err) => {
+    Book.updateBook(bookId, bookData, (err) => {
         if (err) {
           console.error(err);
           res.status(500).send("Erreur lors de la modification du livre.");
