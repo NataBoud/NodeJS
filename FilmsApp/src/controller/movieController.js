@@ -11,22 +11,21 @@ const movieController = {
     }
   },
 
-  getMovie: async (req, res) => {
-    try {
-      const movie = await Movie.findOne({title: req.params.title});
-      if (!movie) {
-        return res.status(404).json({ message: "Film non trouvé" });
-      }
-      res.json(movie);
-    } catch (error) {
-      res.status(500).json({ error: error.message });
-    }
-  },
-
   getAllMovies: async (req, res) => {
     try {
       const movies = await Movie.find();
       res.json(movies);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  },
+  getMovie: async (req, res) => {
+    try {
+      const movie = await Movie.findOne({ title: req.params.title });
+      if (!movie) {
+        return res.status(404).json({ message: "Film non trouvé" });
+      }
+      res.json(movie);
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
